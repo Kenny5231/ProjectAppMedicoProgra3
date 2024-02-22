@@ -17,6 +17,23 @@ public:
     CreateUser(QWidget *parent = nullptr);
     ~CreateUser();
 
+private slots:
+    void on_AdministradorDelSistema_pressed();
+
+    void on_BackAdminSystem_pressed();
+
+    void on_pushButton_pressed();
+
+    void on_CrearUser_pressed();
+
+    void on_pushButton_2_pressed();
+
+    void on_UserDown_pressed();
+
+    void on_Expedientes_pressed();
+
+    void on_pushButton_4_pressed();
+
 private:
     Ui::CreateUser *ui;
 };
