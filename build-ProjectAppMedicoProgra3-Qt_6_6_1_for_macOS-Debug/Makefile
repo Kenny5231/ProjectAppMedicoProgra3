@@ -52,10 +52,12 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../ProjectAppMedicoProgra3/main.cpp \
+SOURCES       = ../ProjectAppMedicoProgra3/classcreateuser.cpp \
+		../ProjectAppMedicoProgra3/main.cpp \
 		../ProjectAppMedicoProgra3/createuser.cpp qrc_qmake_qmake_qm_files.cpp \
 		moc_createuser.cpp
-OBJECTS       = main.o \
+OBJECTS       = classcreateuser.o \
+		main.o \
 		createuser.o \
 		qrc_qmake_qmake_qm_files.o \
 		moc_createuser.o
@@ -193,6 +195,7 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/spec_post.prf \
+		../ProjectAppMedicoProgra3/.qmake.stash \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/toolchain.prf \
@@ -223,7 +226,9 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exceptions.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
-		../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../ProjectAppMedicoProgra3/createuser.h ../ProjectAppMedicoProgra3/main.cpp \
+		../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../ProjectAppMedicoProgra3/classcreateuser.h \
+		../ProjectAppMedicoProgra3/createuser.h ../ProjectAppMedicoProgra3/classcreateuser.cpp \
+		../ProjectAppMedicoProgra3/main.cpp \
 		../ProjectAppMedicoProgra3/createuser.cpp
 QMAKE_TARGET  = ProjectAppMedicoProgra3
 DESTDIR       = 
@@ -233,7 +238,7 @@ TARGET        = ProjectAppMedicoProgra3.app/Contents/MacOS/ProjectAppMedicoProgr
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 12.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Library/Developer/CommandLineTools
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/Kenny/Documents/GitHub/ProjectAppMedicoProgra3/build-ProjectAppMedicoProgra3-Qt_6_6_1_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -383,6 +388,7 @@ Makefile: ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../../../../Qt/
 		../../../../Qt/6.6.1/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/toolchain.prf \
@@ -553,6 +559,7 @@ Makefile: ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../../../../Qt/
 ../../../../Qt/6.6.1/macos/mkspecs/features/qt_config.prf:
 ../../../../Qt/6.6.1/macos/mkspecs/macx-clang/qmake.conf:
 ../../../../Qt/6.6.1/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Qt/6.6.1/macos/mkspecs/features/exclusive_builds.prf:
 ../../../../Qt/6.6.1/macos/mkspecs/features/mac/sdk.prf:
 ../../../../Qt/6.6.1/macos/mkspecs/features/toolchain.prf:
@@ -614,8 +621,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3_es_HN.ts $(DISTDIR)/
 	$(COPY_FILE) --parents qmake_qmake_qm_files.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/createuser.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuser.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/classcreateuser.h ../ProjectAppMedicoProgra3/createuser.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/classcreateuser.cpp ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuser.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/createuser.ui $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3_es_HN.ts $(DISTDIR)/
 
@@ -627,6 +634,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r ProjectAppMedicoProgra3.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -689,6 +697,19 @@ compiler_clean: compiler_lrelease_clean compiler_rcc_clean compiler_moc_header_c
 
 ####### Compile
 
+classcreateuser.o: ../ProjectAppMedicoProgra3/classcreateuser.cpp ../ProjectAppMedicoProgra3/classcreateuser.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o classcreateuser.o ../ProjectAppMedicoProgra3/classcreateuser.cpp
+
 main.o: ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -703,7 +724,12 @@ main.o: ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuse
 createuser.o: ../ProjectAppMedicoProgra3/createuser.cpp ../ProjectAppMedicoProgra3/createuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_createuser.h
+		ui_createuser.h \
+		../ProjectAppMedicoProgra3/classcreateuser.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Qt/6.6.1/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createuser.o ../ProjectAppMedicoProgra3/createuser.cpp
 
 qrc_qmake_qmake_qm_files.o: qrc_qmake_qmake_qm_files.cpp 

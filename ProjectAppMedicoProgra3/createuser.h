@@ -22,7 +22,7 @@ private slots:
 
     void on_BackAdminSystem_pressed();
 
-    void on_pushButton_pressed();
+    //void on_pushButton_pressed();
 
     void on_CrearUser_pressed();
 
@@ -33,6 +33,10 @@ private slots:
     void on_Expedientes_pressed();
 
     void on_pushButton_4_pressed();
+
+    void on_CreateUserBT_pressed();
+
+    void on_pushButton_3_pressed();
 
 private:
     Ui::CreateUser *ui;

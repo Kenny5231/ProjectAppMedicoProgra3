@@ -17,14 +17,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>0</x>
+      <y>30</y>
       <width>761</width>
       <height>521</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="menuPrincipal">
      <widget class="QPushButton" name="AdministradorDelSistema">
@@ -246,7 +246,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="UserRolCreate">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -269,7 +269,7 @@
        <string>Ingrese su Rol:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="CreateUserBT">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -302,15 +302,15 @@
        <rect>
         <x>220</x>
         <y>100</y>
-        <width>231</width>
+        <width>281</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Ingrese el User que quiere dar de baja:</string>
+       <string>Ingrese el Nombre del que quiere dar de baja:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="NameUserEdit">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -331,6 +331,29 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>160</y>
+        <width>191</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la cuenta del User:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CuentaUserEdit">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
       </property>
      </widget>
     </widget>

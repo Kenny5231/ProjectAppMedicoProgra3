@@ -49,14 +49,16 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QLineEdit *UserCuentaCreate;
-    QLineEdit *lineEdit;
+    QLineEdit *UserRolCreate;
     QLabel *label_6;
-    QPushButton *pushButton;
+    QPushButton *CreateUserBT;
     QWidget *page_3;
     QLabel *label_7;
     QLabel *label_8;
-    QLineEdit *lineEdit_2;
+    QLineEdit *NameUserEdit;
     QPushButton *pushButton_2;
+    QLabel *label_21;
+    QLineEdit *CuentaUserEdit;
     QWidget *page_4;
     QLabel *label_9;
     QPushButton *NewExpedienteExpedientes;
@@ -98,7 +100,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(10, 10, 761, 521));
+        stackedWidget->setGeometry(QRect(0, 30, 761, 521));
         menuPrincipal = new QWidget();
         menuPrincipal->setObjectName("menuPrincipal");
         AdministradorDelSistema = new QPushButton(menuPrincipal);
@@ -158,15 +160,15 @@ public:
         UserCuentaCreate = new QLineEdit(page);
         UserCuentaCreate->setObjectName("UserCuentaCreate");
         UserCuentaCreate->setGeometry(QRect(210, 190, 191, 31));
-        lineEdit = new QLineEdit(page);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(210, 250, 191, 31));
+        UserRolCreate = new QLineEdit(page);
+        UserRolCreate->setObjectName("UserRolCreate");
+        UserRolCreate->setGeometry(QRect(210, 250, 191, 31));
         label_6 = new QLabel(page);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(210, 230, 161, 16));
-        pushButton = new QPushButton(page);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(260, 300, 100, 32));
+        CreateUserBT = new QPushButton(page);
+        CreateUserBT->setObjectName("CreateUserBT");
+        CreateUserBT->setGeometry(QRect(260, 300, 100, 32));
         stackedWidget->addWidget(page);
         page_3 = new QWidget();
         page_3->setObjectName("page_3");
@@ -175,13 +177,19 @@ public:
         label_7->setGeometry(QRect(220, 20, 271, 51));
         label_8 = new QLabel(page_3);
         label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(220, 100, 231, 16));
-        lineEdit_2 = new QLineEdit(page_3);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(220, 120, 151, 31));
+        label_8->setGeometry(QRect(220, 100, 281, 16));
+        NameUserEdit = new QLineEdit(page_3);
+        NameUserEdit->setObjectName("NameUserEdit");
+        NameUserEdit->setGeometry(QRect(220, 120, 151, 31));
         pushButton_2 = new QPushButton(page_3);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(330, 410, 121, 41));
+        label_21 = new QLabel(page_3);
+        label_21->setObjectName("label_21");
+        label_21->setGeometry(QRect(220, 160, 191, 16));
+        CuentaUserEdit = new QLineEdit(page_3);
+        CuentaUserEdit->setObjectName("CuentaUserEdit");
+        CuentaUserEdit->setGeometry(QRect(220, 180, 151, 31));
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName("page_4");
@@ -281,7 +289,7 @@ public:
 
         retranslateUi(CreateUser);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(CreateUser);
@@ -306,10 +314,11 @@ public:
         label_4->setText(QCoreApplication::translate("CreateUser", "Ingrese su Nombre:", nullptr));
         label_5->setText(QCoreApplication::translate("CreateUser", "Ingrese  su Cuenta:", nullptr));
         label_6->setText(QCoreApplication::translate("CreateUser", "Ingrese su Rol:", nullptr));
-        pushButton->setText(QCoreApplication::translate("CreateUser", "Regresar", nullptr));
+        CreateUserBT->setText(QCoreApplication::translate("CreateUser", "Regresar", nullptr));
         label_7->setText(QCoreApplication::translate("CreateUser", "<html><head/><body><p><span style=\" font-size:24pt;\">Dar de baja a un usuario</span></p></body></html>", nullptr));
-        label_8->setText(QCoreApplication::translate("CreateUser", "Ingrese el User que quiere dar de baja:", nullptr));
+        label_8->setText(QCoreApplication::translate("CreateUser", "Ingrese el Nombre del que quiere dar de baja:", nullptr));
         pushButton_2->setText(QCoreApplication::translate("CreateUser", "Back", nullptr));
+        label_21->setText(QCoreApplication::translate("CreateUser", "Ingrese la cuenta del User:", nullptr));
         label_9->setText(QCoreApplication::translate("CreateUser", "<html><head/><body><p><span style=\" font-size:36pt;\">Expedientes</span></p></body></html>", nullptr));
         NewExpedienteExpedientes->setText(QCoreApplication::translate("CreateUser", "Nuevo expediente", nullptr));
         pushButton_3->setText(QCoreApplication::translate("CreateUser", "Agregar datos al expediente", nullptr));
