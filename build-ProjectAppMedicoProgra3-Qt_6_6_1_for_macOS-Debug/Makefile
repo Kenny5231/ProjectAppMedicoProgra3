@@ -52,11 +52,13 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../ProjectAppMedicoProgra3/classcreateuser.cpp \
+SOURCES       = ../ProjectAppMedicoProgra3/adminexpedientes.cpp \
+		../ProjectAppMedicoProgra3/classcreateuser.cpp \
 		../ProjectAppMedicoProgra3/main.cpp \
 		../ProjectAppMedicoProgra3/createuser.cpp qrc_qmake_qmake_qm_files.cpp \
 		moc_createuser.cpp
-OBJECTS       = classcreateuser.o \
+OBJECTS       = adminexpedientes.o \
+		classcreateuser.o \
 		main.o \
 		createuser.o \
 		qrc_qmake_qmake_qm_files.o \
@@ -226,8 +228,10 @@ DIST          = ../../../../Qt/6.6.1/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/exceptions.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/yacc.prf \
 		../../../../Qt/6.6.1/macos/mkspecs/features/lex.prf \
-		../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../ProjectAppMedicoProgra3/classcreateuser.h \
-		../ProjectAppMedicoProgra3/createuser.h ../ProjectAppMedicoProgra3/classcreateuser.cpp \
+		../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3.pro ../ProjectAppMedicoProgra3/adminexpedientes.h \
+		../ProjectAppMedicoProgra3/classcreateuser.h \
+		../ProjectAppMedicoProgra3/createuser.h ../ProjectAppMedicoProgra3/adminexpedientes.cpp \
+		../ProjectAppMedicoProgra3/classcreateuser.cpp \
 		../ProjectAppMedicoProgra3/main.cpp \
 		../ProjectAppMedicoProgra3/createuser.cpp
 QMAKE_TARGET  = ProjectAppMedicoProgra3
@@ -621,8 +625,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3_es_HN.ts $(DISTDIR)/
 	$(COPY_FILE) --parents qmake_qmake_qm_files.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/classcreateuser.h ../ProjectAppMedicoProgra3/createuser.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/classcreateuser.cpp ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuser.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/adminexpedientes.h ../ProjectAppMedicoProgra3/classcreateuser.h ../ProjectAppMedicoProgra3/createuser.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/adminexpedientes.cpp ../ProjectAppMedicoProgra3/classcreateuser.cpp ../ProjectAppMedicoProgra3/main.cpp ../ProjectAppMedicoProgra3/createuser.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/createuser.ui $(DISTDIR)/
 	$(COPY_FILE) --parents ../ProjectAppMedicoProgra3/ProjectAppMedicoProgra3_es_HN.ts $(DISTDIR)/
 
@@ -696,6 +700,19 @@ compiler_lex_clean:
 compiler_clean: compiler_lrelease_clean compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+adminexpedientes.o: ../ProjectAppMedicoProgra3/adminexpedientes.cpp ../ProjectAppMedicoProgra3/adminexpedientes.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QFile \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qfile.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDataStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QTextStream \
+		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/qtextstream.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o adminexpedientes.o ../ProjectAppMedicoProgra3/adminexpedientes.cpp
 
 classcreateuser.o: ../ProjectAppMedicoProgra3/classcreateuser.cpp ../ProjectAppMedicoProgra3/classcreateuser.h \
 		../../../../Qt/6.6.1/macos/lib/QtCore.framework/Headers/QString \
