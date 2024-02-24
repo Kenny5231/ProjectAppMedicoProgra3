@@ -1,8 +1,10 @@
 #include "createuser.h"
 #include "ui_createuser.h"
 #include "classcreateuser.h"
+#include "adminexpedientes.h"
 #include <QMessageBox>>
 ClassCreateUser createuser;
+AdminExpedientes Expedientes;
 CreateUser::CreateUser(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::CreateUser)
