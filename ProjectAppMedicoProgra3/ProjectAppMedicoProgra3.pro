@@ -10,14 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     adminexpedientes.cpp \
+    adminsalas.cpp \
     classcreateuser.cpp \
     main.cpp \
-    createuser.cpp
+    createuser.cpp \
+    recetas.cpp
 
 HEADERS += \
     adminexpedientes.h \
+    adminsalas.h \
     classcreateuser.h \
-    createuser.h
+    createuser.h \
+    recetas.h
 
 FORMS += \
     createuser.ui
