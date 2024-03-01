@@ -2,8 +2,6 @@
 #include "ui_createuser.h"
 #include "classcreateuser.h"
 #include "adminexpedientes.h"
-#include "adminsalas.h"
-#include "recetas.h"
 #include <QMessageBox>>
 ClassCreateUser createuser;
 AdminExpedientes Expedientes;
@@ -90,51 +88,6 @@ void CreateUser::on_CreateUserBT_pressed()
 
 void CreateUser::on_pushButton_3_pressed()
 {
-
-}
-
-
-void CreateUser::on_pushButton_pressed()
-{
-    ui->stackedWidget->setCurrentIndex(11);
-}
-
-
-void CreateUser::on_pushButton_6_pressed()
-{
-    ui->stackedWidget->setCurrentIndex(12);
-}
-
-
-void CreateUser::on_pushButton_7_pressed()
-{
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-
-void CreateUser::on_new_prescription_btn_pressed()
-{
-   //poner fecha actual
-    QDateEdit date_actual;
-    QDate currentDate = QDate::currentDate();
-    date_actual.setDate(currentDate);
-    date_actual.show();
-
-    //poner a los pacientes
-    QComboBox patients_data;
-    QFile file("expedientes.itn");
-    if (!file.open(QIODevice::ReadOnly)) {
-        return 1;
-    }
-    QDataStream read(&file);
-    QString paciente;
-    while (!read.atEnd()) {
-        read >> paciente;
-        patients_data.addItem(paciente);
-    }
-    file.close();
-    patients_data.show();
-
 
 }
 
